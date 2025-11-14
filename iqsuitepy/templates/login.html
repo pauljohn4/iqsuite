@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ Suite Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0F6D65, #F7F7F3);
+            font-family: 'Montserrat', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background: #ffffff;
+            padding: 40px 50px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .login-box h2 {
+            color: #0F6D65;
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+
+        .microsoft-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #ffffff;
+            color: #333;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease-in-out;
+            font-size: 15px;
+        }
+
+        .microsoft-btn:hover {
+            background-color: #f3f3f3;
+            border-color: #0F6D65;
+            color: #0F6D65;
+            transform: translateY(-2px);
+        }
+
+        .microsoft-btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h2>Welcome to IQ Suite</h2>
+        <a href="{{ url_for('login') }}" class="microsoft-btn">
+            <!-- Microsoft Logo SVG -->
+            <svg viewBox="0 0 23 23">
+                <rect x="1" y="1" width="9" height="9" fill="#f35325" />
+                <rect x="13" y="1" width="9" height="9" fill="#81bc06" />
+                <rect x="1" y="13" width="9" height="9" fill="#05a6f0" />
+                <rect x="13" y="13" width="9" height="9" fill="#ffba08" />
+            </svg>
+            Sign in with Office 365
+        </a>
+    </div>
+</body>
+
+</html>
